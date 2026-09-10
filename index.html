@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>简历 — 岭南大学 ATB 硕士研究生</title>
+
+  <meta name="description" content="岭南大学 艺术科技与商业 (ATB) 硕士 — 简约现代个人简历，适配手机端，适合互动艺术科技课程作业。" />
+
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent-1: #7bd389;
+      --accent-2: #6aa8ff;
+      --glass: rgba(255,255,255,0.04);
+      --max-width: 900px;
+      --radius: 14px;
+      --glass-2: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      --glass-border: rgba(255,255,255,0.04);
+      --shadow: 0 6px 18px rgba(2,6,23,0.6);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    }
+
+    /* Mobile-first reset + base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font-sans);
+      background:
+        radial-gradient(800px 400px at 10% 10%, rgba(106,168,255,0.06), transparent 6%),
+        radial-gradient(700px 350px at 90% 90%, rgba(123,211,137,0.04), transparent 8%),
+        var(--bg);
+      color: #eaf0f6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:28px 18px;
+    }
+
+    .wrap{
+      max-width:var(--max-width);
+      margin:0 auto;
+      display:grid;
+      gap:18px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid var(--glass-border);
+      padding:14px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .avatar{
+      width:72px;
+      height:72px;
+      min-width:72px;
+      border-radius:14px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,var(--accent-2),var(--accent-1));
+      color: #082233;
+      font-weight:700;
+      font-size:26px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    }
+
+    .head-info h1{
+      margin:0;
+      font-size:18px;
+      letter-spacing:0.2px;
+    }
+    .head-info p{
+      margin:6px 0 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    nav{
+      margin-top:6px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .chip{
+      background:var(--glass);
+      color:var(--muted);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      text-decoration:none;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    main{
+      display:grid;
+      gap:14px;
+    }
+
+    /* Card style for sections */
+    section.card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border:1px solid var(--glass-border);
+      padding:14px;
+      border-radius:12px;
+    }
+    section.card h2{
+      margin:0 0 10px 0;
+      font-size:15px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .muted{color:var(--muted); font-size:13px}
+
+    /* layout for summary and columns on larger screens */
+    .profile{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      justify-content:space-between;
+    }
+    .profile .intro{
+      flex:1 1 auto;
+      color:#dfe9f4;
+    }
+    .profile .meta{
+      min-width:120px;
+      text-align:right;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Education & Experience lists */
+    .list{display:flex;flex-direction:column;gap:12px}
+    .item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .item .left{
+      min-width:10px;
+      margin-top:3px;
+    }
+    .item .right{
+      flex:1;
+    }
+    .item h3{margin:0;font-size:14px}
+    .item .meta{font-size:13px;color:var(--muted);margin-top:4px}
+
+    /* Projects using details for interaction */
+    details{
+      background:rgba(255,255,255,0.01);
+      border-radius:10px;
+      padding:10px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    summary{
+      list-style:none;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    details[open] summary::after{
+      content:"▲";
+      margin-left:auto;
+      font-size:12px;
+      color:var(--muted);
+    }
+    details summary::after{
+      content:"▼";
+      margin-left:auto;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .project-body{margin-top:8px;color:var(--muted);font-size:14px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+    /* Skills */
+    .skills{display:flex;flex-direction:column;gap:10px}
+    .skill{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .skill .head{
+      display:flex;
+      justify-content:space-between;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .skill-bar{
+      height:10px;
+      background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:999px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .skill-fill{
+      height:100%;
+      width:0%;
+      background: linear-gradient(90deg,var(--accent-2),var(--accent-1));
+      border-radius:999px;
+      transition: width 1.2s cubic-bezier(.2,.9,.2,1);
+      box-shadow: 0 6px 16px rgba(106,168,255,0.06) inset;
+    }
+    /* animate to custom percent (passed by inline style --percent) */
+    .skill-fill.animate{
+      width: var(--percent, 60%);
+    }
+
+    /* Contact */
+    .contacts{display:flex;flex-direction:column;gap:8px}
+    .contact-row{display:flex;gap:10px;align-items:center}
+    .contact-row a{color:var(--accent-2);text-decoration:none;font-weight:600}
+    .btn{
+      display:inline-block;
+      background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
+      color:#04202a;
+      padding:8px 12px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    footer{margin-top:6px;text-align:center;color:var(--muted);font-size:13px;padding:8px}
+
+    /* Desktop layout */
+    @media(min-width:760px){
+      .wrap{padding:36px 20px}
+      main{
+        grid-template-columns: 1fr 360px;
+        align-items:start;
+        gap:18px;
+      }
+      .left-column{display:flex;flex-direction:column;gap:14px}
+      .right-column{display:flex;flex-direction:column;gap:14px}
+      header{padding:16px}
+      .avatar{width:88px;height:88px;min-width:88px;font-size:30px;border-radius:16px}
+    }
+
+    /* small polish */
+    a.chip:hover{transform:translateY(-2px)}
+    details{transition: box-shadow 220ms, transform 220ms}
+    details:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(2,6,23,0.5)}
+    summary::-webkit-details-marker{display:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">ATB</div>
+      <div class="head-info">
+        <h1>你的名字（请替换）</h1>
+        <p>香港岭南大学 — 硕士研究生（艺术科技与商业 ATB） · 互动艺术·媒体装置·数据可视化</p>
+        <nav aria-label="页面导航">
+          <a class="chip" href="#profile">简介</a>
+          <a class="chip" href="#education">教育</a>
+          <a class="chip" href="#intern">实习</a>
+          <a class="chip" href="#projects">项目</a>
+          <a class="chip" href="#skills">技能</a>
+          <a class="chip" href="#contact">联系方式</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Left column: primary content -->
+      <div class="left-column">
+        <section id="profile" class="card">
+          <h2>个人简介</h2>
+          <div class="profile">
+            <div class="intro">
+              <p>我是一名攻读岭南大学艺术科技与商业（ATB）硕士的学生，关注互动装置、实时数据可视化与跨媒介表达。擅长将编程、传感器与艺术叙事结合，设计可体验的展览与教学原型。当前研究方向：以观众行为驱动的生成式影像与声音交互。</p>
+              <p class="muted">目标：为展览、公共艺术或教育项目开发沉浸式互动体验，探索技术与文化的共鸣。</p>
+            </div>
+
+            <div class="meta">
+              <div style="font-weight:700">岭南大学（岭南香港）</div>
+              <div class="muted">Master of Arts in Arts, Tech & Business (ATB)</div>
+              <div class="muted" style="margin-top:8px">预计毕业：2026</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="education" class="card">
+          <h2>教育背景</h2>
+          <div class="list">
+            <div class="item">
+              <div class="left">•</div>
+              <div class="right">
+                <h3>岭南大学 — 艺术科技与商业（ATB） 硕士研究生</h3>
+                <div class="meta">2024 — 预计 2026 · 研究方向：互动媒体、体验设计、跨学科创作</div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="left">•</div>
+              <div class="right">
+                <h3>（本科）学校名称 · 专业</h3>
+                <div class="meta">2020 — 2023 · 相关课程：视觉传达、数字媒体、编程基础</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="intern" class="card">
+          <h2>实习经历</h2>
+          <div class="list">
+            <div class="item">
+              <div class="left">•</div>
+              <div class="right">
+                <h3>互动艺术工作室 / 实习交互设计师</h3>
+                <div class="meta">2025年暑期 · 香港</div>
+                <p class="muted">参与展览装置开发：负责传感器数据采集、实时视觉合成与现场调试；与策展团队协作完成现场互动脚本与用户引导。</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="left">•</div>
+              <div class="right">
+                <h3>创意科技公司 / 前端开发实习生</h3>
+                <div class="meta">2023 — 2024 · 实习</div>
+                <p class="muted">参与可视化仪表盘与网站交互模块开发，使用 HTML/CSS/JavaScript 与 WebGL 原型，实现数据驱动的动画效果。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="card">
+          <h2>课程项目（精选）</h2>
+
+          <details open>
+            <summary>
+              <strong>1. 参与式影像装置 — 「回声地图」</strong>
+            </summary>
+            <div class="project-body">
+              <p>一个基于现场声响与移动数据生成实时影像的装置。在小组中负责声音采集与影像合成模块，使用 Max/MSP 与 p5.js 串接，将观众行为映射为可视图形。</p>
+              <div class="tags">
+                <span class="tag">技术：Max/MSP · p5.js · WebSocket</span>
+                <span class="tag">角色：声音交互 · 原型开发</span>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <strong>2. 数据驱动的互动海报</strong>
+            </summary>
+            <div class="project-body">
+              <p>设计一套响应社交媒体实时趋势的海报系统，通过 API 拉取关键词并驱动海报的视觉元素，探讨数据与视觉叙事的关系。</p>
+              <div class="tags">
+                <span class="tag">技术：Node.js · D3.js</span>
+                <span class="tag">角色：后端数据处理 · 可视化设计</span>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <strong>3. AR 导览原型（课程作业）</strong>
+            </summary>
+            <div class="project-body">
+              <p>为小型展览制作的 AR 导览原型，整合文本、音频与简易交互，引导观众在馆内完成任务式体验。</p>
+              <div class="tags">
+                <span class="tag">技术：AR.js · Three.js</span>
+                <span class="tag">角色：交互设计 · 用户测试</span>
+              </div>
+            </div>
+          </details>
+
+        </section>
+      </div>
+
+      <!-- Right column: sidebar -->
+      <aside class="right-column" aria-label="侧边信息">
+        <section id="skills" class="card">
+          <h2>专业技能</h2>
+          <div class="skills" role="list">
+            <div class="skill" role="listitem">
+              <div class="head"><span>创意编程</span><span class="muted">85%</span></div>
+              <div class="skill-bar" aria-hidden="true">
+                <div class="skill-fill animate" style="--percent:85%"></div>
+              </div>
+            </div>
+
+            <div class="skill" role="listitem">
+              <div class="head"><span>实时交互（Max, p5, Three）</span><span class="muted">78%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill animate" style="--percent:78%"></div>
+              </div>
+            </div>
+
+            <div class="skill" role="listitem">
+              <div class="head"><span>数据可视化</span><span class="muted">72%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill animate" style="--percent:72%"></div>
+              </div>
+            </div>
+
+            <div class="skill" role="listitem">
+              <div class="head"><span>原型与用户测试</span><span class="muted">80%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill animate" style="--percent:80%"></div>
+              </div>
+            </div>
+
+            <div class="skill" role="listitem">
+              <div class="head"><span>前端开发（HTML/CSS/JS）</span><span class="muted">70%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill animate" style="--percent:70%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="card">
+          <h2>联系方式</h2>
+          <div class="contacts">
+            <div class="contact-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="opacity:0.9">
+                <path d="M2 6.5C2 5.12 3.12 4 4.5 4h15C20.88 4 22 5.12 22 6.5v11c0 1.38-1.12 2.5-2.5 2.5h-15C3.12 20 2 18.88 2 17.5v-11z" stroke="rgba(255,255,255,0.18)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 6l-10 7L2 6" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <a href="mailto:your.email@example.com">your.email@example.com</a>
+            </div>
+
+            <div class="contact-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="opacity:0.9">
+                <path d="M21 16.5a2 2 0 0 1-2 2h-3.6a1.4 1.4 0 0 1-1.1-.5l-1.2-1.6a10.2 10.2 0 0 1-4.6-4.5L9.1 8.2A1.4 1.4 0 0 1 8.6 7H5a2 2 0 0 1-2-2V4" stroke="rgba(255,255,255,0.18)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <a href="tel:+852-9123-4567">+852 9123 4567</a>
+            </div>
+
+            <div class="contact-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="opacity:0.9">
+                <path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1-1.4-1-1.4-.8-.5.1-.5.1-.5.9.1 1.4.9 1.4.9.8 1.4 2.1 1 2.6.8.1-.6.3-1 .5-1.2-2.2-.2-4.5-1.1-4.5-4.8 0-1.1.4-2 1.1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.8 1.1a9.6 9.6 0 0 1 5.1 0c1.9-1.4 2.8-1.1 2.8-1.1.6 1.4.2 2.4.1 2.7.7.7 1.1 1.6 1.1 2.7 0 3.7-2.3 4.6-4.5 4.8.3.2.6.8.6 1.6v2.4c0 .3.2.6.7.5C19.1 20.2 22 16.4 22 12c0-5.5-4.5-10-10-10z" stroke="rgba(255,255,255,0.18)" stroke-width="0.6" fill="rgba(255,255,255,0.02)"/>
+              </svg>
+              <a href="https://github.com/你的GitHub用户名" target="_blank" rel="noopener">GitHub / 作品集</a>
+            </div>
+
+            <div style="margin-top:8px">
+              <a class="btn" href="mailto:your.email@example.com?subject=合作/项目咨询">联系我</a>
+              <a class="btn" href="#" style="margin-left:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">下载 PDF</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>说明</h2>
+          <p class="muted">此页面为简约现代简历模板，适配手机端。可直接替换文字与链接，并将文件命名为 index.html 放入静态站点（如 GitHub Pages）进行发布。</p>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      &copy; <!-- year filled by user --> 你的名字 · 香港岭南大学 · 艺术科技与商业 (ATB)
+    </footer>
+  </div>
+
+  <script>
+    // 小脚本：无侵入，仅用于在加载时触发技能条动画（在 CSS 已设置 transition 的情况下多余，但可作为兼容性增强）
+    (function(){
+      // ensure skill fills get animated class after DOM loaded
+      document.addEventListener('DOMContentLoaded', function(){
+        var fills = document.querySelectorAll('.skill-fill');
+        fills.forEach(function(el, i){
+          // small stagger
+          setTimeout(function(){ el.classList.add('animate'); }, 120 * i);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
