@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="岭南大学艺术科技与商业（ATB）硕士在读 — 个人简历 / 作品与项目展示" />
+  <title>个人简历 — 岭南大学 ATB 硕士</title>
+
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#2366ff;
+      --accent-2:#6c63ff;
+      --radius:12px;
+      --max-width:1080px;
+      --gap:20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color-scheme: light;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#ffffff);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .avatar{
+      width:56px;
+      height:56px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:18px;
+      box-shadow:0 6px 18px rgba(35,102,255,0.12);
+    }
+    .title{
+      line-height:1;
+    }
+    .title h1{margin:0;font-size:18px}
+    .title p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .nav-link{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:14px;
+      padding:8px 12px;
+      border-radius:8px;
+    }
+    .nav-link:hover{background:rgba(0,0,0,0.04); color:var(--accent)}
+
+    /* Layout */
+    main{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:var(--gap);
+    }
+
+    .container{
+      background:transparent;
+      display:grid;
+      gap:var(--gap);
+      grid-template-columns: 320px 1fr;
+      align-items:start;
+    }
+
+    /* Cards */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.04);
+    }
+
+    /* Left column */
+    .profile{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .name{
+      font-size:20px;
+      font-weight:700;
+      margin:0;
+    }
+    .role{
+      color:var(--muted);
+      font-size:13px;
+      margin:0;
+    }
+    .summary{font-size:14px;color:#111827;line-height:1.6}
+    .contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .contact-list a{color:var(--accent);text-decoration:none;font-size:14px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{
+      background:linear-gradient(180deg,#f3f5ff,#ffffff);
+      color:#111827;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      box-shadow:0 2px 6px rgba(108,99,255,0.08);
+    }
+
+    /* Right column */
+    .section + .section{margin-top:6px}
+    .section h2{
+      margin:0 0 10px 0;
+      font-size:16px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .item{margin-bottom:14px}
+    .item .meta{color:var(--muted);font-size:13px;margin-bottom:6px}
+    .item .desc{font-size:14px;color:#111827;line-height:1.6}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .container{grid-template-columns:1fr; }
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      .avatar{width:48px;height:48px;border-radius:10px}
+    }
+
+    /* Small niceties */
+    a.btn{
+      display:inline-block;
+      background:var(--accent);
+      color:white;
+      padding:8px 12px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 8px 20px rgba(35,102,255,0.12);
+    }
+    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+    /* Print */
+    @media print{
+      body{background:white;padding:0}
+      .card{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="document">
+    <header>
+      <div class="brand" aria-hidden="true">
+        <div class="avatar" title="头像">JL</div>
+        <div class="title">
+          <h1>Jayson / 岭南大学 ATB 硕士在读</h1>
+          <p>艺术 × 科技 × 商业（Art, Tech & Business）</p>
+        </div>
+      </div>
+
+      <nav aria-label="主要导航">
+        <a class="nav-link" href="#about">关于</a>
+        <a class="nav-link" href="#education">教育</a>
+        <a class="nav-link" href="#internships">实习</a>
+        <a class="nav-link" href="#projects">课程项目</a>
+        <a class="nav-link" href="#skills">技能</a>
+        <a class="nav-link" href="#contact">联系方式</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- 左栏 -->
+        <aside class="card profile" aria-labelledby="about">
+          <section id="about" class="profile-intro">
+            <p class="name">Jayson (J)</p>
+            <p class="role">岭南大学 — 艺术科技与商业 (MSc ATB) 硕士研究生</p>
+            <p class="summary">
+              我将艺术与科技结合，用以探索以人为本的交互设计与可持续的商业模式。擅长创意编程、交互装置与数据可视化，关注用户体验与项目可落地性。
+            </p>
+          </section>
+
+          <section aria-labelledby="skills-heading">
+            <h3 id="skills-heading" style="margin:0 0 8px 0;font-size:14px">核心技能</h3>
+            <div class="skills" id="skills">
+              <span class="skill">创意编程 (p5.js / Processing)</span>
+              <span class="skill">前端 (HTML/CSS/JS)</span>
+              <span class="skill">数据可视化 (D3 / Python)</span>
+              <span class="skill">交互设计 / 原型</span>
+              <span class="skill">Unity / AR</span>
+              <span class="skill">Adobe CC / Figma</span>
+              <span class="skill">项目管理 & 商业策划</span>
+            </div>
+          </section>
+
+          <section aria-labelledby="contact-heading">
+            <h3 id="contact-heading" style="margin:12px 0 8px 0;font-size:14px">联系方式</h3>
+            <ul class="contact-list">
+              <li><a href="mailto:jayson@example.com">jayson@example.com</a></li>
+              <li><a href="https://github.com/JAYS0N0223" target="_blank" rel="noopener">GitHub / JAYS0N0223</a></li>
+              <li><a href="https://www.linkedin.com/in/jayson" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="#contact" class="btn">下载简历 (PDF)</a></li>
+            </ul>
+          </section>
+        </aside>
+
+        <!-- 右栏 -->
+        <div>
+          <section class="card section" id="education" aria-labelledby="education">
+            <h2>教育背景</h2>
+
+            <div class="item">
+              <div class="meta">岭南大学 (Lingnan University), 香港 — MSc Art, Technology & Business (在读，预计 2026)</div>
+              <div class="desc">
+                研究方向：交互艺术、体验设计与创新商业模式。课程涵盖创意科技、数据分析、创业管理与策展实践。
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="meta">本科 — 视觉艺术 / 设计（示例学校或专业，按需替换）</div>
+              <div class="desc">
+                本科期间参与多项跨学科项目，积累了视觉设计与策展经验。
+              </div>
+            </div>
+          </section>
+
+          <section class="card section" id="internships" aria-labelledby="internships">
+            <h2>实习经历</h2>
+
+            <div class="item">
+              <div class="meta">互动设计实习生 — 某创意工作室 · 香港 · 2025.06 — 2025.09</div>
+              <div class="desc">
+                负责交互装置原型开发（使用 p5.js 与 Arduino）、参与客户沟通与现场安装，优化用户流动与互动响应逻辑，提升展览体验并协助完成技术文档与维护手册。
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="meta">数据分析与可视化实习生 — 市场研究公司 · 2024.06 — 2024.08</div>
+              <div class="desc">
+                使用 Python 清洗数据并用 D3.js 与 Tableau 制作可视化报告，支持营销策略建议，提高客户洞察效率。
+              </div>
+            </div>
+          </section>
+
+          <section class="card section" id="projects" aria-labelledby="projects">
+            <h2>课程项目（精选）</h2>
+
+            <div class="item">
+              <div class="meta">互动装置：城市记忆 · 课程：创意科技</div>
+              <div class="desc">
+                基于传感器与声音合成的装置，用以收集城市声音与观众触发交互，探讨公共记忆的沉浸式呈现。负责前端交互原型与现场部署。
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="meta">商业可视化项目：消费行为洞察 · 课程：数据与商业决策</div>
+              <div class="desc">
+                整合问卷与交易数据，搭建交互式仪表盘（D3.js），为中小企业提出客户分层与营销优化建议，预计可提升复购率。
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="meta">AR 艺术展览策划 · 课程：艺术策展与体验设计</div>
+              <div class="desc">
+                设计 AR 导览及线下空间引导策略，撰写策展文本与技术规范书，协调美术与工程团队完成小型展览。
+              </div>
+            </div>
+          </section>
+
+          <section class="card section" id="skills" aria-labelledby="skills">
+            <h2>专业技能细项</h2>
+
+            <div class="item">
+              <div class="meta">编程与工具</div>
+              <div class="desc">
+                JavaScript (ES6+), p5.js, D3.js, React 基础, Python (pandas, numpy), Unity, Arduino, Git, Figma, Adobe Photoshop/Illustrator/Premiere。
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="meta">设计与方法</div>
+              <div class="desc">
+                交互设计、原型测试、用户研究、服务设计、策展实践、创意商业策划。
+              </div>
+            </div>
+          </section>
+
+          <section class="card section" id="contact" aria-labelledby="contact">
+            <h2>联系方式</h2>
+            <div class="item">
+              <div class="desc">
+                邮箱：<a href="mailto:jayson@example.com">jayson@example.com</a><br />
+                GitHub：<a href="https://github.com/JAYS0N0223" target="_blank" rel="noopener">github.com/JAYS0N0223</a><br />
+                LinkedIn：<a href="https://www.linkedin.com/in/jayson" target="_blank" rel="noopener">linkedin.com/in/jayson</a>
+              </div>
+            </div>
+            <div style="margin-top:10px;">
+              <a class="btn" href="mailto:jayson@example.com?subject=合作/项目咨询">联系我</a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <footer>
+        © <span id="year"></span> Jayson — 岭南大学 ATB 硕士在读 · 此页面为 GitHub Pages 课程作业示例
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // 小脚本：年份与可能的按钮行为（可按需扩展）
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 若需要「下载简历」功能，可把 PDF 上传并替换按钮 href
+    // 例如： document.querySelector('a.btn').href = '/Jayson_CV.pdf';
+  </script>
+</body>
+</html>
